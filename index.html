@@ -511,6 +511,38 @@
                     display: block;
                 }
             }
+
+            .share-article {
+                grid-column: text-start/text-end;
+                margin: 20px auto;
+                display: flex;
+                align-items: center;
+                display: grid;
+                width: 250px;
+                min-width: max-content;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .share-article .share-title {
+                grid-row: 1;
+                text-align: center;
+                width: 100%;
+                grid-column: 1/-1;
+            }
+
+            .share-article .sb {
+                grid-row: 2;
+                cursor: pointer;
+                height: max-content;
+                margin: 10px 0;
+                width: 100%;
+                display: flex;
+                border-right: 1px solid black;
+            }
+
+            .share-article .sb a {
+                margin: 0 auto 0 auto;
+            }
         </style>
         
         <header>
@@ -555,6 +587,27 @@
             </header>
        
         <body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div>
+
+            <div class="share-article">
+
+                <div class="share-title">Поширити:</div>
+            
+                <div class="sb fb"><a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://texty.org.ua/d/2022/twitter/" target="_blank">
+                    <img src="https://texty.org.ua/static/core/images/facebook.svg" alt="Тексти.org.ua - Facebook"></a>
+                </div>
+            
+                <div class="sb tw"><a class="share-btn" href="https://twitter.com/intent/tweet?text=https://texty.org.ua/d/2022/twitter/" target="_blank">
+                    <img src="https://texty.org.ua/static/core/images/twitter.svg" alt="Тексти.org.ua - Twitter"></a>
+                </div>
+            
+                <div class="sb tl"><a class="share-btn" href="https://telegram.me/share/url?url=https://texty.org.ua/d/2022/twitter/" target="_blank">
+                    <img src="https://texty.org.ua/static/core/images/telegram.svg" alt="Тексти.org.ua - Telegram"></a>
+                </div>
+            
+                <div class="sb hr">
+                    <a href="https://texty.org.ua/support/" target="_blank" title="Пожертвувати"><img src="https://texty.org.ua/static/core/images/hrn2.svg" alt="Знак гривні"></a>
+                </div>
+            </div>
 
             <h3 id="read-more-title">Читайте також:</h3>
                 <div id="custom-read-more">
